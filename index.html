@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--cv-form-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Generador CV</title>
+</head>
+<body>
+
+    <div class="contenedor" id="cv-form">
+        <header class="heade">
+            <h1 class="text-center my-3">Generador CV</h1>
+        <p class="text-center">Crea tu CV facil y sencillo!</p>
+        </header>
+
+        <div class="row">
+            <!--Primera columna-->
+            <div class="col-md-6">
+                <h3 class="text-center my-3">Informacion personal</h3>
+                    <div class="form-control mt-2">
+                        <label for="nameField">Nombre Completo</label>
+                        <input 
+                            type="text" 
+                            id="nameField" 
+                            placeholder="Introducir aqui..." 
+                            class="form-control"
+                            required
+                        />
+                    </div>
+
+                    <div class="form-control mt-2">
+                        <label for="correoField">Correo electronico</label>
+                        <input 
+                            type="email" 
+                            id="correoField" 
+                            placeholder="Pablo@gmail.com..." 
+                            class="form-control"
+                            required
+                        />
+                    </div>
+
+                    <div class="form-control mt-2">
+                        <label for="direField">Direccion</label>
+                        <textarea  
+                            id="direField"
+                            placeholder="Introducir aqui..." 
+                            class="form-control"
+                            rows="2"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <div  class="form-control mt-2">
+                        <label for="teleField">Telefono</label>
+                        <input 
+                            type="text" 
+                            id="teleField" 
+                            placeholder="1+849-633-3032" 
+                            class="form-control"
+                            required
+                        />
+                    </div>
+
+                    <div  class="form-control mt-2" id="id">
+                        <label for="ideoField">Idiomas</label>
+                        <input 
+                            type="text"  
+                            placeholder="español..." 
+                            class="form-control ideoField"
+                            required
+                        />
+                        <div class="contenedor text-center mt-2" id="ideobutton">
+                            <button onclick="addNewideoField()" class="btn btnmid btn-sm">Añadir otro</button>
+                        </div>
+                    </div>
+                    
+                    
+                <div  class="form-control mt-2 " id="pw">
+                    <label for="pwField">Pagina Web</label>
+                    <input 
+                        type="text" 
+                        placeholder="Facebook, instagram, twitter..." 
+                        class="form-control pwField"
+                        required
+                    />
+                    <div class="contenedor text-center mt-2" id="pwbutton">
+                        <button onclick="addNewPWField()" class="btn btnmid btn-sm">Añadir otro</button>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!--Segunda columna-->
+            <div class="col-md-6">
+                <h3 class="text-center my-3">Informacion Profesional</h3>
+
+                <div class="form-control mt-2">
+                    <label for="resField">Resumen</label>
+                    <textarea
+                        id="resField"  
+                        placeholder="Introducir aqui..." 
+                        class="form-control"
+                        rows="3"
+                        required
+                    ></textarea>
+                </div>
+
+                <div  class="form-control mt-2" id="em">
+                    <label for="">Empleos</label>
+                    <input 
+                        type="text" 
+                        placeholder="Introducir aqui..." 
+                        class="form-control empField"
+                        required
+                    />
+                    <div class="contenedor text-center mt-2" id="empbutton">
+                        <button onclick="addNewempField()" class="btn btnmid btn-sm">Añadir otro</button>
+                    </div>
+                </div>
+                
+
+                <div  class="form-control mt-2" id="ed">
+                    <label for="eduField">Educacion</label>
+                    <input 
+                        type="text" 
+                        id="eduField" 
+                        placeholder="Colegio, Universidad, politecnico..." 
+                        class="form-control eduField"
+                        required
+                    />
+                    <div class="contenedor text-center mt-2" id="edubutton">
+                        <button onclick="addNeweduField()" class="btn btnmid btn-sm">Añadir otro</button>
+                    </div>
+                </div>
+                
+
+                <div  class="form-control mt-2" id="ha">
+                    <label for="habiField">Habilidades</label>
+                    <input 
+                        type="text" 
+                        id="habiField" 
+                        placeholder="Html, css, JavaScript..." 
+                        class="form-control habiField"
+                        required
+                    />
+                    <div class="contenedor text-center mt-2" id="habibutton">
+                        <button onclick="addNewhabiField()" class="btn btnmid btn-sm">Añadir otro</button>
+                    </div>
+                </div>
+                
+
+                <div  class="form-control mt-2" id="ce">
+                    <label for="cerField">Certificados</label>
+                    <input 
+                        type="text" 
+                        id="cerField" 
+                        placeholder="PHP framework, java, SQL..." 
+                        class="form-control cerField"
+                        required
+                    />
+                    <div class="contenedor text-center mt-2" id="cerbutton">
+                        <button onclick="addNewcerField()" class="btn btnmid btn-sm">Añadir otro</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contenedor text-center mt-3">
+            <button type="submit" onclick="GenerarCV()" class="btn btnbig btn-lg">General CV</button>
+        </div>
+
+    </div >
+
+    <div class="contenedor" id="cv-template">
+        <div class="row">
+                <div class="col-md-4 text-center">
+                    <blockquote class="blockquote text-center">
+                    <div class="background"></div>
+                    <div class="contenedor py-4">
+                        <h3 id="nameT" class="hs">Eliot Nicolas Santos Cabral</h3>
+                    </div>
+                    <img src="pfp.jpg" alt="" class="img-fluid myimg" />
+                    </blockquote>
+                    <blockquote class="blockquote">
+                    <div class="contenedor">
+                        <br><br>
+                        <h3>Direccion:</h3>
+                        <p id="direT">Republica de Colombia</p>
+                        <br>
+                        <h3>Telefono:</h3>
+                        <p id="teleT">1+849-633-3032</p>
+                        <br>
+                        <h3 >Correo:</h3>
+                        <p id="corrT">eliotsantoss108@gmail.com</p>
+                        <br>
+                        <h3 >Paginas Webs:</h3>
+                        <p id="pwT">https://www.instagram.com/eliotsantos111/</p>
+                        <br>
+                        <h3>Idiomas:</h3>
+                        <p id="idoT">español</p>
+                    </div>
+                    </blockquote>
+                    </div>
+                    <div class="col-md-1"></div>
+
+                    <div class="col-md-7 py-5">
+                    <h4 class="py-2"></h4>
+
+                    <div class="card">
+                        <div class="card-header mt-4 hs ">
+                            <h3>Resumen</h3>
+                            <hr/>
+                        </div>
+                        <div class="card-body">
+                            <p id="resT">
+                                No entendía lo que quería decirme, así que se lo advertí y volvió a intentarlo. Y seguí sin entender. 
+                                Quizá pensó en un problema de entendederas mías o de explicaderas suyas, pero en realidad ocurría 
+                                que sus palabras me llegaban como sonidos inarticulados, informes. Me llegaban deformadas e 
+                                irreconocibles, extenuadas por el esfuerzo de atravesar la tela negra de la mascarilla. Borrosas, 
+                                diría un amigo propenso a la sinestesia.  Así que renunció a la conversación y la zanjó con un 
+                                «Mucho texto», que me hizo reír. Significaba que pretendía explicar algo demasiado largo y complejo 
+                                y que no valía la pena. Estaba muy cansada. Le dije que usaría lo de «Mucho texto», si no le importaba. 
+                                La honradez intelectual le obligó a aclararme que la expresión no le pertenecía: provenía de un meme de 
+                                Twitter que se había convertido también en una pegatina (sticker) de WhatsApp. Lo busqué.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header mt-4 hs ">
+                            <h3>Habilidades</h3>
+                            <hr/>
+                        </div>
+                        <div class="card-body">
+                            <ul id="habiT">
+                                <li>
+                                    No entendía lo que quería decirme
+                                </li>
+                                <li>
+                                    No entendía lo que quería decirme
+                                </li>
+                                <li>
+                                    No entendía lo que quería decirme
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header mt-4 hs ">
+                            <h3>Empleos</h3>
+                            <hr/>
+                        </div>
+                        <div class="card-body">
+                            <ul id="empT">
+                                <li>No entendía lo que quería decirme</li>
+                                <li>No entendía lo que quería decirme</li>
+                                <li>No entendía lo que quería decirme</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header mt-4 hs ">
+                            <h3>Educacion</h3>
+                            <hr/>
+                        </div>
+                        <div class="card-body">
+                            <ul id="eduT">
+                                <li>
+                                    No entendía lo que quería decirme
+                                </li>
+                                <li>
+                                    No entendía lo que quería decirme
+                                </li>
+                                <li>
+                                    No entendía lo que quería decirme
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header mt-4 hs ">
+                            <h3>Certificados</h3>
+                            <hr/>
+                        </div>
+                        <div class="card-body">
+                            <ul id="cerT">
+                                <li>No entendía lo que quería decirme</li>
+                                <li>No entendía lo que quería decirme</li>
+                                <li>No entendía lo que quería decirme</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="contenedor mt-3 text-center">
+                        <button onclick="imprimirCV()" class="btn btnbig ">
+                            Imprimir CV
+                        </button>
+                    </div>
+
+                </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script> 
+    <script src="script.js"></script>
+</body>
+</html>
