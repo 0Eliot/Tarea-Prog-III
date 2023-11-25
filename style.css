@@ -1,0 +1,113 @@
+body {
+    background-color: #F8F4EA;
+}
+
+.heade {
+    text-transform: uppercase;
+    padding: 32px;
+    background-color: #579BB1;
+    color: #fff;
+    border-bottom: 4px solid #E1D7C6;
+}
+
+#cv-template{
+    display: none;
+}
+
+.myimg {
+    border: 1px solid #579BB1;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    width: 200px;
+}
+
+.background {
+    padding: 5%;
+    padding-right: 5%;
+    background-color: #579BB1;
+}
+
+.hs {
+    color: #579BB1;
+    font-weight: 800;
+}
+
+.btnn {
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 24px;
+    background: #579BB1;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #0082a6;
+    text-decoration: none;
+}
+
+hr {
+    height: 10px;
+    /*margin-left: 15%;
+    margin-right: 10%;*/
+    background-color: #000000;
+}
+
+.btnmid {
+	box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	background:linear-gradient(to bottom, #6298cd 5%, #579BB1 100%);
+	background-color:#79bbff;
+	border-radius:16px;
+	border:2px solid #84bbf3;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:18px;
+	font-weight:bold;
+	padding:2px 30px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+}
+.btnmid:hover {
+	background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+	background-color:#378de5;
+}
+.btnmid:active {
+	position:relative;
+	top:1px;
+}
+
+.btnbig {
+	box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	background:linear-gradient(to bottom, #6298cd 5%, #579BB1 100%);
+	background-color:#79bbff;
+	border-radius:16px;
+	border:2px solid #84bbf3;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:18px;
+	font-weight:bold;
+	padding:10px 30px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+}
+.btnbig:hover {
+	background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+	background-color:#378de5;
+}
+.btnbig:active {
+	position:relative;
+	top:1px;
+}
+
+
+
